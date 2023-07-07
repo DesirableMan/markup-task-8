@@ -1,8 +1,405 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>задача айБабулька</title>
+        <link rel="stylesheet" href="index.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Bad+Script"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Marck+Script"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Кулинария рецептов</h1>
+        </header>
+        <main>
+            <input
+                type="radio"
+                name="gallery"
+                id="card-1"
+                class="card-1 gallery"
+            />
+            <input
+                type="radio"
+                name="gallery"
+                id="card-2"
+                class="card-2 gallery"
+            />
+            <input
+                type="radio"
+                name="gallery"
+                id="card-3"
+                class="card-3 gallery"
+            />
+            <input
+                type="radio"
+                name="gallery"
+                id="card-4"
+                class="card-4 gallery"
+                checked
+            />
+            <input
+                type="radio"
+                name="gallery"
+                id="card-5"
+                class="card-5 gallery"
+            />
+            <input
+                type="radio"
+                name="gallery"
+                id="card-6"
+                class="card-6 gallery"
+            />
+            <input
+                type="radio"
+                name="gallery"
+                id="card-7"
+                class="card-7 gallery"
+            />
+            <input type="checkbox" id="show-recipe-1" class="show-recipe" />
+            <input type="checkbox" id="show-recipe-2" class="show-recipe" />
+            <input type="checkbox" id="show-recipe-3" class="show-recipe" />
+            <input type="checkbox" id="show-recipe-4" class="show-recipe" />
+            <input type="checkbox" id="show-recipe-5" class="show-recipe" />
+            <input type="checkbox" id="show-recipe-6" class="show-recipe" />
+            <input type="checkbox" id="show-recipe-7" class="show-recipe" />
+            <input type="checkbox" id="close-recipe-1" class="close-recipe" />
+            <input type="checkbox" id="close-recipe-2" class="close-recipe" />
+            <input type="checkbox" id="close-recipe-3" class="close-recipe" />
+            <input type="checkbox" id="close-recipe-4" class="close-recipe" />
+            <input type="checkbox" id="close-recipe-5" class="close-recipe" />
+            <input type="checkbox" id="close-recipe-6" class="close-recipe" />
+            <input type="checkbox" id="close-recipe-7" class="close-recipe" />
+            <section class="content">
+                <article class="card card-1 left-side">
+                    <div class="front">
+                        <label for="card-1">
+                            <img src="./src/potato.png" alt="potato" />
+                        </label>
+                        <label class="recipe" for="show-recipe-1"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-1" class="close">X</label>
+                        <h3>Картофель по-деревенски</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ul>
+                                <li><b>Картофель</b> - 1 кг</li>
+                                <li><b>Сливочное масло</b> - 25 гр.</li>
+                                <li><b>Паприка копченая</b> - 1 ч. л.</li>
+                                <li><b>Сухари панировочные</b> - 4 ст. л.</li>
+                                <li><b>Соль</b> - по вкусу</li>
+                                <li><b>Перец черный</b> - по вкусу</li>
+                            </ul>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ol>
+                                <li>
+                                    Картофель почистить, нарезать на 4 части.
+                                </li>
+                                <li>
+                                    Добавить сливочное масло, сухари, соль,
+                                    перец и приправы.
+                                </li>
+                                <li>
+                                    Выложить на противень, застеленный бумагой.
+                                </li>
+                                <li>
+                                    Выпекать в нагретой духовке до 180 градусов
+                                    30-40 минут
+                                </li>
+                                <li>Готовую картошку посыпать зеленью.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card-2 left-side">
+                    <div class="front">
+                        <label for="card-2">
+                            <img src="./src/tomato.png" alt="tomato" />
+                        </label>
+                        <label class="recipe" for="show-recipe-2"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-2" class="close">X</label>
+                        <h3>Помидоры по-корейски</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ol>
+                                <li><b>Помидоры</b> - 2 кг</li>
+                                <li><b>Перец болгарский</b> - 2 шт.</li>
+                                <li><b>Сахар</b> - 80 гр.</li>
+                                <li><b>Перец горький</b> - 1 шт.</li>
+                                <li><b>Уксус</b> - 100 мл. 6%</li>
+                                <li><b>Чеснок</b> - 2 головки</li>
+                                <li><b>Петрушка</b> - 1 пучок</li>
+                                <li><b>Масло растительное</b> - 100 мл.</li>
+                                <li><b>Соль</b> - 30 гр.</li>
+                            </ol>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ul>
+                                <li>
+                                    Измельчить болгарский и острый перец,
+                                    чеснок.
+                                </li>
+                                <li>
+                                    Добавляем рубленую зелень, соль, сахар,
+                                    растительное масло
+                                </li>
+                                <li>Перемешиваем</li>
+                                <li>
+                                    Залить смесью из перца, чеснока и зелени.
+                                </li>
+                                <li>
+                                    Нарезаем помидоры укладываем на дно
+                                    3-литровой банки
+                                </li>
+                                <li>
+                                    Чередуем укладывать в банку слой помидоров,
+                                    слой заправки
+                                </li>
+                                <li>
+                                    Вакуумируем банку, убираем в холодильник.
+                                </li>
+                                <li>Через сутки помидоры готовы.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card-3 left-side">
+                    <div class="front">
+                        <label for="card-3">
+                            <img src="./src/zucchini.png" alt="zucchini" />
+                        </label>
+                        <label class="recipe" for="show-recipe-3"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-3" class="close">X</label>
+                        <h3>Кабачковые оладьи</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ul>
+                                <li><b>Кабачок</b> - 500 гр.</li>
+                                <li><b>Пшеничная мука</b> - 3 ст. л.</li>
+                                <li><b>Яйцо куриное</b> - 1 шт.</li>
+                                <li><b>Чеснок</b> - 1 зубчик</li>
+                                <li><b>Тертый сыр</b> - 1 ст.л.</li>
+                                <li><b>Соль</b> - по вкусу</li>
+                                <li><b>Перец черный молотый</b> - по вкусу</li>
+                            </ul>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ol>
+                                <li>
+                                    Кабачок очистить от кожуры, натереть на
+                                    крупной терке.
+                                </li>
+                                <li>
+                                    Добавить сырое яйцо и соль, хорошо
+                                    перемешать.
+                                </li>
+                                <li>
+                                    Порциями добавляем муку, сразу размешивая
+                                    её.
+                                </li>
+                                <li>
+                                    В приготовленную смесь добавляем
+                                    измельченный чеснок и сыр
+                                </li>
+                                <li>
+                                    Жарим оладьи на растительном масле до
+                                    золотистой корочки.
+                                </li>
+                                <li>
+                                    Подаём оладьи из кабачков сразу же, со
+                                    сметаной или йогуртом.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card-4 left-side">
+                    <div class="front">
+                        <label for="card-4">
+                            <img src="./src/apple.png" alt="apple" />
+                        </label>
+                        <label class="recipe" for="show-recipe-4"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-4" class="close">X</label>
+                        <h3>Шарлотка</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ul>
+                                <li><b>Пшеничная мука</b> - 200 гр.</li>
+                                <li><b>Сахар</b> - 200 гр.</li>
+                                <li><b>Яйца</b> - 4 шт.</li>
+                                <li><b>Яблоки</b> - 3 шт.</li>
+                                <li><b>Разрыхлитель</b> - 1 чайн. л.</li>
+                            </ul>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ol>
+                                <li>
+                                    Яйца взбить миксером до появления легкой
+                                    пены.
+                                </li>
+                                <li>Добавляем сахар и продолжаем взбивать</li>
+                                <li>
+                                    Муку просеиваем с разрыхлителем в отдельную
+                                    миску.
+                                </li>
+                                <li>Взбивая яйца добавляем муку</li>
+                                <li>
+                                    Очищенные и порезанные яблоки добавляем в
+                                    тесто
+                                </li>
+                                <li>
+                                    В форму застилаем пергаментом, выкладываем
+                                    тесто и разравниваем
+                                </li>
+                                <li>Выпекаем шарлотку в духовке 40-50 минут</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card-5 right-side">
+                    <div class="front">
+                        <label for="card-5">
+                            <img src="./src/carrot.png" alt="carrot" />
+                        </label>
+                        <label class="recipe" for="show-recipe-5"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-5" class="close">X</label>
+                        <h3>Морковь по корейски</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ul>
+                                <li><b>Морковь</b> - 1 кг</li>
+                                <li><b>Чеснок</b> - 2-3 зубч.</li>
+                                <li><b>Уксус</b> - 2 ст.л.</li>
+                                <li><b>Растительное масло</b> - 5 ст.л.</li>
+                                <li><b>Сахар</b> - 1 ст.л.</li>
+                                <li><b>Соль</b> - 1 ч.л.</li>
+                                <li><b>Кориандр</b> - 1/2 ч.л.</li>
+                                <li><b>Перец черный молотый</b> - 1 ч.л.</li>
+                            </ul>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ol>
+                                <li>Натереть морковь на терке.</li>
+                                <li>
+                                    Добавить чеснок, красный и черный перец,
+                                    кориандр, соль, сахар.
+                                </li>
+                                <li>Добавить растительное масло, уксус.</li>
+                                <li>Дать настояться минимум 12-24 часа.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card-6 right-side">
+                    <div class="front">
+                        <label for="card-6">
+                            <img src="./src/pepper.png" alt="pepper" />
+                        </label>
+                        <label class="recipe" for="show-recipe-6"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-6" class="close">X</label>
+                        <h3>Аджика из перца</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ul>
+                                <li><b>Болгарский перец</b> - 2 кг</li>
+                                <li><b>Чеснок</b> - 200 гр.</li>
+                                <li><b>Перец горький</b> 150 гр.</li>
+                                <li><b>Соль</b> - 2 ст.л.</li>
+                                <li><b>Сахар</b> - 8 ст.л.</li>
+                                <li><b>Уксус</b> - 300 мл</li>
+                            </ul>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ol>
+                                <li>Промываем овощи в проточной воде.</li>
+                                <li>
+                                    Очищаем чеснок, перец и вынимаем из него
+                                    семена.
+                                </li>
+                                <li>
+                                    Перекручиваем перец, чеснок через мясорубку.
+                                </li>
+                                <li>Добавляем сахар, соль, уксус в смесь.</li>
+                                <li>Раскладываем по баночкам.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card-7 right-side">
+                    <div class="front">
+                        <label for="card-7">
+                            <img src="./src/cabbage.png" alt="cabbage" />
+                        </label>
+                        <label class="recipe" for="show-recipe-7"></label>
+                    </div>
+                    <div class="recipe-description">
+                        <label for="close-recipe-7" class="close">X</label>
+                        <h3>Тушеная капуста с колбасой</h3>
+                        <div class="ingredients">
+                            <h4>Ингредиенты</h4>
+                            <ul>
+                                <li><b>Белокочанная капуста</b> – 1,3 кг</li>
+                                <li><b>Репчатый лук</b> – 200 гр.</li>
+                                <li><b>Растительное масло</b> – 3 ст.л.</li>
+                                <li><b>Питьевая вода</b> – 150 мл</li>
+                                <li><b>Помидоры</b> – 400 гр.</li>
+                                <li><b>Чеснок</b> – 1 зубчик</li>
+                                <li><b>Вареная колбаса</b> – 200 гр.</li>
+                                <li>
+                                    <b>Молотая копченая паприка</b> – 1 ст.л.
+                                </li>
+                                <li><b>Яблочный уксус</b> – 1 ст.л.</li>
+                                <li><b>Молотый черный перец</b> – по вкусу</li>
+                                <li><b>Соль</b> – по вкусу</li>
+                            </ul>
+                        </div>
+                        <div class="steps">
+                            <h4>Способ приготовления</h4>
+                            <ol>
+                                <li>Режем, затем тушим лук.</li>
+                                <li>
+                                    Капусту шинкуем и добавляем к луку. Тушим
+                                </li>
+                                <li>Добавляем порезанные помидоры и чеснок.</li>
+                                <li>
+                                    Добавляем порезанную колбасу, уксус, перец,
+                                    соль, тушим еще 5 минут.
+                                </li>
+                                <li>Раскладываем по тарелкам!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <div class="gallery__overlay"></div>
+            </section>
+            <footer class="footer"></footer>
+        </main>
+    </body>
 </html>

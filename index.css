@@ -1,0 +1,596 @@
+body
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("./src/kulinarnaya-zastavka.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #b9b4b4;
+    z-index: -10;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.header
+{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header h1
+{
+    font-family: inherit;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+main
+{
+    max-width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+
+.content
+{
+    font-family: inherit;
+    height: 100%;
+    display: flex;
+    transform-style: preserve-3d;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    text-align: center;
+
+}
+
+
+.card
+{
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 29px -5px rgba(0,0,0,.75);
+    /*!*box-shadow: 0 0 10px 5px #aaa;*!*/
+}
+
+
+img
+{
+    width: 250px;
+    height: 250px;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,1px);
+}
+
+
+.recipe-description
+{
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background: url("./src/background.jpg") center center no-repeat;
+    transform: translate3d(0,0,-1px) rotate3d(1,0,0,180deg);
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    overflow: hidden;
+    /*z-index: -1;*/
+
+}
+
+.front,
+.recipe-description
+{
+    backface-visibility: hidden;
+}
+
+input.gallery,
+input.show-recipe,
+input.close-recipe
+{
+    display: none;
+}
+
+.content >.left-side,
+.content >.right-side
+{
+    margin-left: -100px;
+}
+
+.content > .card:first-child
+{
+    margin-left: 0;
+}
+
+.card-1:checked ~ .content
+{
+    transform: translateX(22%);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+.card-2:checked ~ .content
+{
+    transform: translateX(16%);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+.card-3:checked ~ .content
+{
+    transform: translateX(8%);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+.card-4:checked ~ .content
+{
+    transform: translateX(0);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+.card-5:checked ~ .content
+{
+    transform: translateX(-8%);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+.card-6:checked ~ .content
+{
+    transform: translateX(-16%);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+.card-7:checked ~ .content
+{
+    transform: translateX(-22%);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+
+.card-1
+{
+    transform:rotate3d(0, 1, 0, 25deg);
+    transition-duration: 3s;
+
+}
+
+.card-2
+{
+    transform:rotate3d(0, 1, 0, 30deg);
+    transition-duration: 3s;
+
+}
+
+.card-3
+{
+    transform:rotate3d(0, 1, 0, 35deg);
+    transition-duration: 3s;
+
+}
+
+.card-4
+{
+    transform:rotate3d(0, 1, 0, 30deg);
+    transition-duration: 3s;
+
+}
+
+.card-5
+{
+    transform:rotate3d(0, 1, 0, 35deg);
+    transition-duration: 3s;
+
+}
+
+.card-6
+{
+    transform:rotate3d(0, 1, 0, 40deg);
+    transition-duration: 3s;
+
+}
+
+.card-7
+{
+    transform:rotate3d(0, 1, 0, 45deg);
+    transition-duration: 3s;
+
+}
+
+
+input.card-1:checked ~ .content .card-1,
+input.card-2:checked ~ .content .card-2,
+input.card-3:checked ~ .content .card-3,
+input.card-4:checked ~ .content .card-4,
+input.card-5:checked ~ .content .card-5,
+input.card-6:checked ~ .content .card-6,
+input.card-7:checked ~ .content .card-7
+{
+
+    transform: translateZ(150px);
+}
+
+
+input.card-1:checked ~ .content .card-2
+{
+    transform: rotate3d(0, -1, 0, 20deg);
+    transition-duration: 2s;
+}
+
+
+input.card-1:checked ~ .content .card-3,
+input.card-2:checked ~ .content .card-3
+{
+    transform: rotate3d(0, -1, 0, 25deg);
+    transition-duration: 2s;
+}
+
+
+input.card-1:checked ~ .content .card-4,
+input.card-2:checked ~ .content .card-4,
+input.card-3:checked ~ .content .card-4
+{
+    transform: rotate3d(0, -1, 0, 30deg);
+    transition-duration: 2s;
+}
+
+input.card-1:checked ~ .content .card-5,
+input.card-2:checked ~ .content .card-5,
+input.card-3:checked ~ .content .card-5,
+input.card-4:checked ~ .content .card-5
+{
+    transform: rotate3d(0, -1, 0, 35deg);
+    transition-duration: 2s;
+}
+
+
+input.card-1:checked ~ .content .card-6,
+input.card-2:checked ~ .content .card-6,
+input.card-3:checked ~ .content .card-6,
+input.card-4:checked ~ .content .card-6,
+input.card-5:checked ~ .content .card-6
+{
+    transform: rotate3d(0, -1, 0, 30deg);
+    transition-duration: 2s;
+}
+
+
+input.card-1:checked ~ .content .card-7,
+input.card-2:checked ~ .content .card-7,
+input.card-3:checked ~ .content .card-7,
+input.card-4:checked ~ .content .card-7,
+input.card-5:checked ~ .content .card-7,
+input.card-6:checked ~ .content .card-7
+{
+    transform: rotate3d(0, -1, 0, 20deg);
+    transform-origin: center center;
+    transition-duration: 2s;
+}
+
+
+input.card-1:checked ~ .content .card-1:hover img,
+input.card-2:checked ~ .content .card-2:hover img,
+input.card-3:checked ~ .content .card-3:hover img,
+input.card-4:checked ~ .content .card-4:hover img,
+input.card-5:checked ~ .content .card-5:hover img,
+input.card-6:checked ~ .content .card-6:hover img,
+input.card-7:checked ~ .content .card-7:hover img
+
+{
+    animation-name: recipeLabel;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes recipeLabel {
+    25% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: .8;
+        background: rgba(0, 0, 0, .7);
+    }
+}
+
+
+
+.recipe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.recipe:hover:before
+{
+    content: 'Рецепт';
+    text-transform: uppercase;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-top: 30%;
+}
+
+
+input.card-1:checked ~ .content .card-1:hover .recipe,
+input.card-2:checked ~ .content .card-2:hover .recipe,
+input.card-3:checked ~ .content .card-3:hover .recipe,
+input.card-4:checked ~ .content .card-4:hover .recipe,
+input.card-5:checked ~ .content .card-5:hover .recipe,
+input.card-6:checked ~ .content .card-6:hover .recipe,
+input.card-7:checked ~ .content .card-7:hover .recipe
+{
+    width: 80%;
+    height: 60%;
+    display: inline-block;
+    animation-name: showHeader;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+@keyframes showHeader {
+    0% {
+        transform: translateZ(2px);
+        border: 5px solid white;
+    }
+
+    75% {
+        opacity: .8;
+        background: rgba(0, 0, 0, .7);
+        transform: translateZ(2px);
+        border: 3px solid white;
+    }
+
+    100% {
+        opacity: .8;
+        background: rgba(0, 0, 0, .7);
+        border-radius: 50%;
+        transform: translateZ(2px);
+        border: 1px solid white;
+    }
+}
+
+
+
+input[id='show-recipe-1']:checked ~ .content .card-1,
+input[id='show-recipe-2']:checked ~ .content .card-2,
+input[id='show-recipe-3']:checked ~ .content .card-3,
+input[id='show-recipe-4']:checked ~ .content .card-4,
+input[id='show-recipe-5']:checked ~ .content .card-5,
+input[id='show-recipe-6']:checked ~ .content .card-6,
+input[id='show-recipe-7']:checked ~ .content .card-7
+{
+    animation-name: showRecipe;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes showRecipe {
+    20% {
+        transform: translateY(-200px) translateZ(300px);
+    }
+
+    50%,
+    100% {
+        width: 500px;
+        height: 300px;
+        transform: translateY(-200px) translateZ(300px)
+            scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+    }
+}
+
+
+input[id='close-recipe-1']:checked ~ .content .card-1,
+input[id='close-recipe-2']:checked ~ .content .card-2,
+input[id='close-recipe-3']:checked ~ .content .card-3,
+input[id='close-recipe-4']:checked ~ .content .card-4,
+input[id='close-recipe-5']:checked ~ .content .card-5,
+input[id='close-recipe-6']:checked ~ .content .card-6,
+input[id='close-recipe-7']:checked ~ .content .card-7
+{
+    animation-name: closeRecipe;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes closeRecipe {
+    20% {
+        transform: translateY(-200px) translateZ(300px);
+    }
+
+    50%,
+    100% {
+        width: 500px;
+        transform: translateY(-200px) translateZ(300px)
+                scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+    }
+}
+
+
+
+
+input[id='show-recipe-1']:checked ~ .content .card-1 .recipe,
+input[id='show-recipe-2']:checked ~ .content .card-2 .recipe,
+input[id='show-recipe-3']:checked ~ .content .card-3 .recipe,
+input[id='show-recipe-4']:checked ~ .content .card-4 .recipe,
+input[id='show-recipe-5']:checked ~ .content .card-5 .recipe,
+input[id='show-recipe-6']:checked ~ .content .card-6 .recipe,
+input[id='show-recipe-7']:checked ~ .content .card-7 .recipe
+{
+    display: none;
+}
+
+h3
+{
+    background-color: #fff;
+    border-radius: 20%;
+    border: 2px solid black;
+    font: 25px 'Marck Script', cursive;
+    margin: 5px auto;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: center;
+}
+
+h4
+{
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    text-decoration: underline;
+    color: #9C1A1C;
+}
+
+ul,
+ol {
+    margin: 0;
+}
+
+ol {
+     padding: 0 5px 10px 20px;
+}
+
+ul {
+     padding: 0 5px 10px 10px;
+}
+
+li {
+    font-size: 10px;
+}
+
+.ingredients,
+.steps
+{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20%;
+    border: 2px solid black;
+    margin: 10px;
+    font-family: 'Bad Script', cursive;
+    text-align: left;
+}
+
+.ingredients
+{
+    width: 40%;
+    left: 0;
+}
+
+.ingredients ul li
+{
+    list-style-type: none;
+}
+
+.steps
+{
+    width: 50%;
+    right: 0;
+}
+
+.recipe-description .close
+{
+    position: absolute;
+    cursor: pointer;
+    color: #000;
+    background: red;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font: bold 15px arial;
+    transition: transform .5s ease-in-out;
+}
+
+.close:hover
+{
+    transform: rotate(180deg) scale(1.2);
+    background-color: green;
+    transition-property: transform, background-color;
+    transition-duration: .5s, .5s;
+
+}
+
+
+input[id='show-recipe-1']:checked ~ .content .gallery__overlay,
+input[id='show-recipe-2']:checked ~ .content .gallery__overlay,
+input[id='show-recipe-3']:checked ~ .content .gallery__overlay,
+input[id='show-recipe-4']:checked ~ .content .gallery__overlay,
+input[id='show-recipe-5']:checked ~ .content .gallery__overlay,
+input[id='show-recipe-6']:checked ~ .content .gallery__overlay,
+input[id='show-recipe-7']:checked ~ .content .gallery__overlay
+{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: rgba(33, 28, 28, .8);
+    position: absolute;
+    z-index: 0;
+    transform: translateZ(200px);
+    transition-property: background;
+    transition-duration: 2s;
+}
+
+
+input.close-recipe:checked ~ .content .gallery__overlay
+{
+    display: none;
+}
